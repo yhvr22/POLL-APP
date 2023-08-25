@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hinw&ae0cf+*_d*e6t)i8rekpmwi-uf84yzizs@b%wd1!me@$t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False,
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','.vercel.app','.now.sh']
 
 
 # Application definition
@@ -198,3 +198,7 @@ SOCIALACCOUNT_PROVIDERS = {
         'VERSION': 'v13.0',
     }
 }
+
+import os
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
